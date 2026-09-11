@@ -95,7 +95,7 @@ export OPENROUTER_API_KEY="YOUR_API_KEY"
 ### 7️⃣ Run HCO Matrix 🚀
 
 ```bash
-python ai.py
+python HCO-Matrix.py
 ```
 
 ---
@@ -153,7 +153,7 @@ export OPENROUTER_API_KEY="YOUR_API_KEY"
 ### 7️⃣ Start the tool 🚀
 
 ```bash
-python3 ai.py
+python3 HCO-Matrix.py
 ```
 
 ---
