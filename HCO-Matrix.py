@@ -17,10 +17,7 @@ import requests
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "openrouter/free"
 
-YOUTUBE_URL = (
-    "https://youtube.com/@hackers_colony_tech"
-    "?si=aojETEUcjhSIYUXB"
-)
+YOUTUBE_URL = "https://youtube.com/@hackers_colony_tech"
 
 
 # ============================================================
@@ -40,7 +37,7 @@ WHITE = "\033[1;37m"
 
 
 # ============================================================
-# AI SYSTEM PROMPT
+# SYSTEM PROMPT
 # ============================================================
 
 SYSTEM_PROMPT = (
@@ -52,7 +49,7 @@ SYSTEM_PROMPT = (
 
 
 # ============================================================
-# CLEAR TERMINAL
+# CLEAR SCREEN
 # ============================================================
 
 def clear():
@@ -60,7 +57,7 @@ def clear():
 
 
 # ============================================================
-# HCO ASCII LOGO
+# HCO MATRIX LOGO
 # ============================================================
 
 def hco_logo():
@@ -103,21 +100,10 @@ def banner():
 
     print(f"{CYAN}{BOLD}")
 
-    print(
-        "╔══════════════════════════════════════════════════════════╗"
-    )
-
-    print(
-        "║                       HCO MATRIX                         ║"
-    )
-
-    print(
-        "║             AI Command-Line Assistant                    ║"
-    )
-
-    print(
-        "╚══════════════════════════════════════════════════════════╝"
-    )
+    print("╔══════════════════════════════════════════════════════════╗")
+    print("║                       HCO MATRIX                         ║")
+    print("║             AI Command-Line Assistant                    ║")
+    print("╚══════════════════════════════════════════════════════════╝")
 
     print(f"{RESET}")
 
@@ -136,7 +122,7 @@ def open_youtube():
             YOUTUBE_URL
         ],
 
-        # Android Activity Manager
+        # Android
         [
             "am",
             "start",
@@ -149,7 +135,8 @@ def open_youtube():
         [
             "xdg-open",
             YOUTUBE_URL
-        ],
+        ]
+
     ]
 
     for command in commands:
@@ -175,7 +162,7 @@ def open_youtube():
 
 
 # ============================================================
-# LOCK / YOUTUBE SCREEN
+# TOOL LOCK SCREEN
 # ============================================================
 
 def startup_screen():
@@ -184,80 +171,97 @@ def startup_screen():
 
     print(f"{RED}{BOLD}")
 
-    print(
-        "╔══════════════════════════════════════════════════════════╗"
-    )
-
-    print(
-        "║                                                          ║"
-    )
-
-    print(
-        "║                    🔒 TOOL LOCKED 🔒                    ║"
-    )
-
-    print(
-        "║                                                          ║"
-    )
-
-    print(
-        "╚══════════════════════════════════════════════════════════╝"
-    )
+    print("╔══════════════════════════════════════════════════════════╗")
+    print("║                                                          ║")
+    print("║                  🔒 TOOL LOCKED 🔒                      ║")
+    print("║                                                          ║")
+    print("╚══════════════════════════════════════════════════════════╝")
 
     print(f"{RESET}")
+
+    print()
+
+    print(
+        f"{YELLOW}{BOLD}"
+        "Hello Mr. Hacker 👋"
+        f"{RESET}"
+    )
 
     print()
 
     print(
         f"{WHITE}"
-        "To use HCO Matrix, you will be redirected to the\n"
-        "Hackers Colony Tech YouTube channel."
+        "This tool is locked 🔒"
         f"{RESET}"
     )
 
     print()
 
-    print(f"{YELLOW}{BOLD}")
-    print("📺 HACKERS COLONY TECH")
+    print(
+        f"{WHITE}"
+        "To unlock 🔓 this tool, you will be redirected to our\n"
+        "YouTube Channel: Hackers Colony Tech."
+        f"{RESET}"
+    )
+
     print()
-    print("👍 Like the content")
-    print("🔔 Subscribe / enable the bell if you enjoy the content")
-    print("↩️  Then come back to this terminal")
+
+    print(
+        f"{GREEN}{BOLD}"
+        "Please Like 👍, Subscribe 🔔 and click on the Bell 🔔 icon."
+        f"{RESET}"
+    )
+
+    print()
+
+    print(
+        f"{WHITE}"
+        "Then come back to this terminal and your tool will be\n"
+        "unlocked 🔓."
+        f"{RESET}"
+    )
+
+    print()
+
+    print(f"{CYAN}{BOLD}")
+    print("────────────────────────────────────────────────────────────")
     print(f"{RESET}")
-
-    print()
-
-    print(f"{CYAN}{BOLD}🔗 Channel:{RESET}")
-    print(YOUTUBE_URL)
 
     print()
 
     print(
         f"{MAGENTA}{BOLD}"
-        "⚡ You will be redirected automatically..."
+        "📺 Hackers Colony Tech"
         f"{RESET}"
     )
 
     print()
 
-    print(f"{BLUE}{BOLD}Opening YouTube in:{RESET}")
+    print(
+        f"{CYAN}"
+        "🔗 https://youtube.com/@hackers_colony_tech"
+        f"{RESET}"
+    )
+
     print()
 
-    # Countdown 8 → 0
+    print(f"{BLUE}{BOLD}")
+    print("Redirecting to YouTube app in")
+    print(f"{RESET}")
 
+    print()
+
+    # Countdown: 8 → 7 → 6 → ... → 0
     for number in range(8, -1, -1):
 
         print(
-            f"\r{YELLOW}{BOLD}"
+            f"{YELLOW}{BOLD}"
             f"                    {number}"
-            f"{RESET}",
-            end="",
-            flush=True
+            f"{RESET}"
         )
 
         time.sleep(1)
 
-    print()
     print()
 
     print(
@@ -275,8 +279,8 @@ def startup_screen():
         print()
 
         print(
-            f"{YELLOW}"
-            "⚠️ Automatic YouTube opening is unavailable."
+            f"{RED}{BOLD}"
+            "⚠️ Could not open YouTube automatically."
             f"{RESET}"
         )
 
@@ -284,23 +288,27 @@ def startup_screen():
 
         print(
             f"{WHITE}"
-            "Open the channel manually:"
+            "Please open this channel manually:"
             f"{RESET}"
         )
+
+        print()
 
         print(YOUTUBE_URL)
 
     print()
 
-    input(
+    print(
         f"{CYAN}{BOLD}"
-        "↩️  Come back here and press ENTER to unlock HCO Matrix..."
+        "↩️ Come back here and press ENTER to unlock HCO Matrix..."
         f"{RESET}"
     )
 
+    input()
+
 
 # ============================================================
-# API KEY
+# API KEY SETUP
 # ============================================================
 
 def get_api_key():
@@ -309,17 +317,9 @@ def get_api_key():
 
     print(f"{GREEN}{BOLD}")
 
-    print(
-        "╔══════════════════════════════════════════════════════════╗"
-    )
-
-    print(
-        "║                  🔐 API KEY SETUP                        ║"
-    )
-
-    print(
-        "╚══════════════════════════════════════════════════════════╝"
-    )
+    print("╔══════════════════════════════════════════════════════════╗")
+    print("║                  🔐 API KEY SETUP                        ║")
+    print("╚══════════════════════════════════════════════════════════╝")
 
     print(f"{RESET}")
 
@@ -417,7 +417,10 @@ def ask_ai(api_key, messages):
 
     if response.status_code != 200:
 
-        error = data.get("error", data)
+        error = data.get(
+            "error",
+            data
+        )
 
         raise RuntimeError(
             f"API error ({response.status_code}): {error}"
@@ -442,21 +445,15 @@ def show_menu():
 
     print(f"{BLUE}{BOLD}")
 
-    print(
-        "╭────────────────────────────────────────────────────────╮"
-    )
-
-    print(
-        "│                  ⚡ HCO MATRIX MENU ⚡                  │"
-    )
-
-    print(
-        "╰────────────────────────────────────────────────────────╯"
-    )
+    print("╭────────────────────────────────────────────────────────╮")
+    print("│                  ⚡ HCO MATRIX MENU ⚡                  │")
+    print("╰────────────────────────────────────────────────────────╯")
 
     print(f"{RESET}")
 
-    print(f"{CYAN}[1]{RESET} 🤖 Ask AI")
+    print(
+        f"{CYAN}[1]{RESET} 🤖 Ask AI"
+    )
 
     print(
         f"{GREEN}[2]{RESET} 🐧 Explain Linux / Termux Command"
@@ -492,28 +489,30 @@ def show_menu():
 def assistant(api_key):
 
     messages = [
+
         {
             "role": "system",
             "content": SYSTEM_PROMPT
         }
+
     ]
 
     prompts = {
 
         "1":
-        "Ask your question",
+            "Ask your question",
 
         "2":
-        "Which Linux/Termux command do you want explained?",
+            "Which Linux/Termux command do you want explained?",
 
         "3":
-        "What code do you need help creating or debugging?",
+            "What code do you need help creating or debugging?",
 
         "4":
-        "What cybersecurity topic do you want to learn about?",
+            "What cybersecurity topic do you want to learn about?",
 
         "5":
-        "Ask your question",
+            "Ask your question",
     }
 
     while True:
@@ -544,7 +543,9 @@ def assistant(api_key):
 
             return
 
+        # ----------------------------------------------------
         # EXIT
+        # ----------------------------------------------------
 
         if choice == "0":
 
@@ -558,15 +559,19 @@ def assistant(api_key):
 
             return
 
-        # CLEAR CHAT
+        # ----------------------------------------------------
+        # CLEAR CONVERSATION
+        # ----------------------------------------------------
 
         if choice == "6":
 
             messages = [
+
                 {
                     "role": "system",
                     "content": SYSTEM_PROMPT
                 }
+
             ]
 
             input(
@@ -577,7 +582,9 @@ def assistant(api_key):
 
             continue
 
+        # ----------------------------------------------------
         # INVALID OPTION
+        # ----------------------------------------------------
 
         if choice not in prompts:
 
@@ -588,6 +595,10 @@ def assistant(api_key):
             )
 
             continue
+
+        # ----------------------------------------------------
+        # QUESTION
+        # ----------------------------------------------------
 
         print()
 
@@ -601,11 +612,17 @@ def assistant(api_key):
 
             continue
 
+        # ----------------------------------------------------
+        # ADD USER MESSAGE
+        # ----------------------------------------------------
+
         messages.append(
+
             {
                 "role": "user",
                 "content": question
             }
+
         )
 
         print()
@@ -615,6 +632,10 @@ def assistant(api_key):
             "⏳ HCO Matrix is thinking..."
             f"{RESET}"
         )
+
+        # ----------------------------------------------------
+        # API REQUEST
+        # ----------------------------------------------------
 
         try:
 
@@ -628,20 +649,32 @@ def assistant(api_key):
             messages.pop()
 
             input(
+
                 f"\n{RED}"
                 f"❌ {error}"
                 f"{RESET}\n\n"
                 "Press ENTER..."
+
             )
 
             continue
 
+        # ----------------------------------------------------
+        # ADD AI RESPONSE
+        # ----------------------------------------------------
+
         messages.append(
+
             {
                 "role": "assistant",
                 "content": answer
             }
+
         )
+
+        # ----------------------------------------------------
+        # SHOW RESPONSE
+        # ----------------------------------------------------
 
         clear()
 
@@ -684,13 +717,22 @@ def assistant(api_key):
 
 def main():
 
-    # 1. Locked startup
+    # --------------------------------------------------------
+    # TOOL LOCK SCREEN
+    # --------------------------------------------------------
+
     startup_screen()
 
-    # 2. Ask user's API key
+    # --------------------------------------------------------
+    # API KEY
+    # --------------------------------------------------------
+
     api_key = get_api_key()
 
-    # 3. Unlock screen
+    # --------------------------------------------------------
+    # UNLOCK SCREEN
+    # --------------------------------------------------------
+
     clear()
 
     print(
@@ -699,7 +741,7 @@ def main():
     )
 
     print(
-        "║             🔓 HCO MATRIX UNLOCKED 🔓                   ║"
+        "║             🔓 HCO MATRIX UNLOCKED 🔓                  ║"
     )
 
     print(
@@ -709,7 +751,6 @@ def main():
 
     print()
 
-    # 4. Big HCO logo
     hco_logo()
 
     print(
@@ -720,9 +761,17 @@ def main():
 
     time.sleep(2)
 
-    # 5. Start assistant
+    # --------------------------------------------------------
+    # START ASSISTANT
+    # --------------------------------------------------------
+
     assistant(api_key)
 
 
+# ============================================================
+# RUN
+# ============================================================
+
 if __name__ == "__main__":
+
     main()
