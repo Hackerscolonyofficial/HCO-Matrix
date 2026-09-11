@@ -1,0 +1,39 @@
+HCO MATRIX PROPRIETARY LICENSE
+
+Copyright (c) 2026 Hackers Colony Tech. All rights reserved.
+
+1. GRANT
+Permission is granted to download and use HCO Matrix for personal,
+educational, and testing purposes, subject to this license.
+
+2. RESTRICTIONS
+Without prior written permission from Hackers Colony Tech, you may NOT:
+- reproduce, republish, mirror, or redistribute the source code;
+- upload this source code or substantial portions to another repository;
+- sell, sublicense, or commercially distribute the software;
+- remove copyright, license, or attribution notices;
+- present the software or a modified copy as your own original project.
+
+3. MODIFICATIONS
+Local modifications are permitted for personal and educational use.
+Modified versions may not be redistributed without prior written permission.
+
+4. THIRD-PARTY SERVICES
+HCO Matrix uses third-party services/APIs. Their own terms, policies, pricing,
+and rate limits apply separately.
+
+5. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED. THE COPYRIGHT HOLDER SHALL NOT BE LIABLE FOR ANY CLAIM, DAMAGES, OR
+OTHER LIABILITY ARISING FROM THE USE OF THE SOFTWARE.
+
+6. SECURITY
+Users are responsible for protecting their own API keys and credentials.
+
+7. PERMISSION
+For permission to redistribute, fork, publish, modify for distribution, or
+commercially use HCO Matrix, contact Hackers Colony Tech.
+
+8. TERMINATION
+Any rights granted under this license terminate upon violation of its terms.
+
