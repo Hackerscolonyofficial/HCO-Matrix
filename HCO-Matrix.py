@@ -102,7 +102,7 @@ def banner():
 
     print("╔══════════════════════════════════════════════════════════╗")
     print("║                       HCO MATRIX                         ║")
-    print("║             AI Command-Line Assistant                    ║")
+    print("║             AI Command-Line Assistant by Azhar Team HCO                  ║")
     print("╚══════════════════════════════════════════════════════════╝")
 
     print(f"{RESET}")
