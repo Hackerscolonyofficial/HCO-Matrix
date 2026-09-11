@@ -8,23 +8,30 @@ CYAN='\033[1;36m'
 GREEN='\033[1;32m'
 YELLOW='\033[1;33m'
 RED='\033[1;31m'
+BOLD='\033[1m'
 RESET='\033[0m'
 
 
+# ============================================================
+# HCO MATRIX INSTALLER
+# ============================================================
+
 clear
 
-echo -e "${CYAN}"
+echo -e "${CYAN}${BOLD}"
+
 echo "╔══════════════════════════════════════════════════════════╗"
 echo "║                      HCO MATRIX                          ║"
 echo "║                 INSTALLATION SYSTEM                      ║"
 echo "╚══════════════════════════════════════════════════════════╝"
+
 echo -e "${RESET}"
 
 echo
 
 
 # ============================================================
-# DETECT TERMUX / LINUX
+# TERMUX DETECTION
 # ============================================================
 
 if command -v pkg >/dev/null 2>&1; then
@@ -36,6 +43,11 @@ if command -v pkg >/dev/null 2>&1; then
     pkg update -y
 
     pkg install -y python
+
+
+# ============================================================
+# LINUX
+# ============================================================
 
 else
 
@@ -86,12 +98,12 @@ fi
 
 
 # ============================================================
-# INSTALL PYTHON REQUIREMENTS
+# PYTHON DEPENDENCIES
 # ============================================================
 
 echo
 
-echo -e "${YELLOW}"
+echo -e "${YELLOW}${BOLD}"
 echo "📦 Installing Python dependencies..."
 echo -e "${RESET}"
 
@@ -100,19 +112,20 @@ python3 -m pip install \
 
 
 # ============================================================
-# PERMISSIONS
+# FILE PERMISSION
 # ============================================================
 
 chmod +x "$PROJECT_DIR/HCO-Matrix.py"
 
 
 # ============================================================
-# COMPLETE
+# INSTALLATION COMPLETE
 # ============================================================
 
 echo
 
-echo -e "${GREEN}{BOLD}"
+echo -e "${GREEN}${BOLD}"
+
 echo "╔══════════════════════════════════════════════════════════╗"
 echo "║                                                          ║"
 echo "║              ✅ INSTALLATION COMPLETE                    ║"
@@ -120,13 +133,14 @@ echo "║                                                          ║"
 echo "║              🚀 STARTING HCO MATRIX...                  ║"
 echo "║                                                          ║"
 echo "╚══════════════════════════════════════════════════════════╝"
+
 echo -e "${RESET}"
 
 sleep 2
 
 
 # ============================================================
-# AUTO START
+# AUTOMATICALLY START HCO MATRIX
 # ============================================================
 
 exec python3 "$PROJECT_DIR/HCO-Matrix.py"
