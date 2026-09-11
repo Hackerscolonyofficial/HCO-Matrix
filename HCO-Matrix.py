@@ -9,7 +9,9 @@ import requests
 
 
 # ============================================================
-# HCO MATRIX CONFIG
+# HCO MATRIX
+# AI Command-Line Assistant for Termux & Linux
+# Code by Azhar (A-Z-H-A-R) • HCO Team
 # ============================================================
 
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
@@ -50,7 +52,7 @@ SYSTEM_PROMPT = (
 
 
 # ============================================================
-# CLEAR SCREEN
+# CLEAR TERMINAL
 # ============================================================
 
 def clear():
@@ -58,7 +60,7 @@ def clear():
 
 
 # ============================================================
-# HCO LOGO
+# HCO ASCII LOGO
 # ============================================================
 
 def hco_logo():
@@ -72,9 +74,11 @@ def hco_logo():
     print("██║  ██║╚██████╗╚██████╔╝")
     print("╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ")
 
-    print(f"{YELLOW}          M A T R I X{RESET}")
-
     print()
+
+    print(f"{YELLOW}{BOLD}")
+    print("          M A T R I X")
+    print(f"{RESET}")
 
     print(
         f"{MAGENTA}{BOLD}"
@@ -92,10 +96,10 @@ def hco_logo():
 
 
 # ============================================================
-# SMALL BANNER
+# MAIN BANNER
 # ============================================================
 
-def small_banner():
+def banner():
 
     print(f"{CYAN}{BOLD}")
 
@@ -132,7 +136,7 @@ def open_youtube():
             YOUTUBE_URL
         ],
 
-        # Android
+        # Android Activity Manager
         [
             "am",
             "start",
@@ -141,7 +145,7 @@ def open_youtube():
             YOUTUBE_URL
         ],
 
-        # Linux
+        # Linux desktop
         [
             "xdg-open",
             YOUTUBE_URL
@@ -171,7 +175,7 @@ def open_youtube():
 
 
 # ============================================================
-# STARTUP LOCK SCREEN
+# LOCK / YOUTUBE SCREEN
 # ============================================================
 
 def startup_screen():
@@ -230,17 +234,17 @@ def startup_screen():
 
     print(
         f"{MAGENTA}{BOLD}"
-        "⚡ Opening Hackers Colony Tech automatically..."
+        "⚡ You will be redirected automatically..."
         f"{RESET}"
     )
 
     print()
 
     print(f"{BLUE}{BOLD}Opening YouTube in:{RESET}")
-
     print()
 
-    # 8 → 0 countdown
+    # Countdown 8 → 0
+
     for number in range(8, -1, -1):
 
         print(
@@ -280,7 +284,7 @@ def startup_screen():
 
         print(
             f"{WHITE}"
-            "Please open the channel manually:"
+            "Open the channel manually:"
             f"{RESET}"
         )
 
@@ -296,7 +300,7 @@ def startup_screen():
 
 
 # ============================================================
-# API KEY INPUT
+# API KEY
 # ============================================================
 
 def get_api_key():
@@ -324,7 +328,7 @@ def get_api_key():
     print(
         f"{WHITE}"
         "HCO Matrix uses your own OpenRouter API key.\n"
-        "Your API key is entered locally and is not included\n"
+        "The key is entered locally and is not included\n"
         "inside the GitHub source code."
         f"{RESET}"
     )
@@ -332,7 +336,7 @@ def get_api_key():
     print()
 
     print(
-        f"{YELLOW}"
+        f"{YELLOW}{BOLD}"
         "🔑 Enter your OpenRouter API key below."
         f"{RESET}"
     )
@@ -377,7 +381,7 @@ def get_api_key():
 
 
 # ============================================================
-# AI REQUEST
+# OPENROUTER REQUEST
 # ============================================================
 
 def ask_ai(api_key, messages):
@@ -431,7 +435,7 @@ def ask_ai(api_key, messages):
 
 
 # ============================================================
-# MAIN MENU
+# MENU
 # ============================================================
 
 def show_menu():
@@ -482,7 +486,7 @@ def show_menu():
 
 
 # ============================================================
-# ASSISTANT
+# AI ASSISTANT
 # ============================================================
 
 def assistant(api_key):
@@ -516,7 +520,7 @@ def assistant(api_key):
 
         clear()
 
-        small_banner()
+        banner()
 
         show_menu()
 
@@ -534,11 +538,13 @@ def assistant(api_key):
 
             print(
                 f"{GREEN}{BOLD}"
-                "Goodbye from HCO Matrix 👋"
+                "👋 Goodbye from HCO Matrix!"
                 f"{RESET}"
             )
 
             return
+
+        # EXIT
 
         if choice == "0":
 
@@ -551,6 +557,8 @@ def assistant(api_key):
             )
 
             return
+
+        # CLEAR CHAT
 
         if choice == "6":
 
@@ -568,6 +576,8 @@ def assistant(api_key):
             )
 
             continue
+
+        # INVALID OPTION
 
         if choice not in prompts:
 
@@ -588,6 +598,7 @@ def assistant(api_key):
         ).strip()
 
         if not question:
+
             continue
 
         messages.append(
@@ -634,7 +645,7 @@ def assistant(api_key):
 
         clear()
 
-        small_banner()
+        banner()
 
         print(
             f"{GREEN}{BOLD}"
@@ -673,10 +684,13 @@ def assistant(api_key):
 
 def main():
 
+    # 1. Locked startup
     startup_screen()
 
+    # 2. Ask user's API key
     api_key = get_api_key()
 
+    # 3. Unlock screen
     clear()
 
     print(
@@ -695,6 +709,7 @@ def main():
 
     print()
 
+    # 4. Big HCO logo
     hco_logo()
 
     print(
@@ -705,6 +720,7 @@ def main():
 
     time.sleep(2)
 
+    # 5. Start assistant
     assistant(api_key)
 
 
