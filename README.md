@@ -67,7 +67,7 @@ pkg install git python -y
 ### 3️⃣ Clone HCO Matrix
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Hackerscolonyofficial/HCO-Matrix.git
 ```
 
 ### 4️⃣ Enter the directory
@@ -121,7 +121,7 @@ sudo apt install git python3 python3-pip -y
 ### 3️⃣ Clone HCO Matrix
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+git clone https://github.com/Hackerscolonyofficial/HCO-Matrix.git
 ```
 
 ### 4️⃣ Enter the directory
